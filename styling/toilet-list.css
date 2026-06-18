@@ -1,0 +1,138 @@
+/* Reusing variables from :root in calendar.css for consistency */
+/* --brutal-black, --brutal-white, --brutal-border-width, --brutal-shadow */
+
+.toilet-list-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+}
+
+/* --- Toilet Card Styling --- */
+.toilet-card {
+    border: var(--brutal-border-width) solid var(--brutal-black);
+    background-color: var(--brutal-white);
+    box-shadow: var(--brutal-shadow);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: 0.1s;
+}
+
+.toilet-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px 0px var(--brutal-black);
+}
+
+.toilet-card h4 {
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    color: var(--brutal-black);
+}
+
+.toilet-card p {
+    margin-bottom: 0.5rem;
+    color: var(--brutal-black);
+}
+
+.toilet-card .address {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #555; /* Slightly muted for address */
+}
+
+.toilet-card .description {
+    flex-grow: 1; /* Allows description to take up available space */
+    margin-bottom: 1rem;
+}
+
+.toilet-card .status-indicator {
+    font-weight: 900;
+    padding: 0.25rem 0.75rem;
+    border: 2px solid var(--brutal-black);
+    border-radius: 0;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.toilet-card.greenlist .status-indicator {
+    background-color: #8BC34A; /* Green for friendly */
+    color: var(--brutal-black);
+}
+
+.toilet-card.blacklist .status-indicator {
+    background-color: #F44336; /* Red for unfriendly */
+    color: var(--brutal-black);
+}
+
+/* --- Toggle Switch Styling (Neobrutalist) --- */
+.toggle-switch {
+    position: relative;
+    width: 120px;
+    display: inline-block;
+    text-align: left;
+}
+
+.toggle-switch-checkbox {
+    display: none;
+}
+
+.toggle-switch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: var(--brutal-border-width) solid var(--brutal-black);
+    border-radius: 0;
+    box-shadow: var(--brutal-shadow);
+}
+
+.toggle-switch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in-out;
+}
+.toggle-switch-inner:before, .toggle-switch-inner:after {
+    float: left;
+    width: 50%;
+    height: 40px;
+    padding: 0;
+    line-height: 40px;
+    font-size: 16px;
+    color: var(--brutal-white);
+    font-weight: 900;
+    box-sizing: border-box;
+    text-align: center;
+}
+.toggle-switch-inner:before {
+    content: "GREENLIST";
+    background-color: #8BC34A; /* Green */
+    color: var(--brutal-black);
+}
+.toggle-switch-inner:after {
+    content: "BLACKLIST";
+    background-color: #F44336; /* Red */
+    color: var(--brutal-black);
+}
+
+
+
+.toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-inner {
+    margin-left: 0;
+}
+
+.toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-switch {
+    right: 0;
+}
+
+/* Dark mode adjustments */
+[data-bs-theme="dark"] .toggle-switch-inner:before {
+    background-color: #689F38; /* Darker green */
+}
+[data-bs-theme="dark"] .toggle-switch-inner:after {
+    background-color: #D32F2F; /* Darker red */
+}
+[data-bs-theme="dark"] .toggle-switch-switch {
+    background: var(--brutal-black); /* In dark mode, switch is dark */
+}
