@@ -10,9 +10,9 @@ const HOME_PAGE_CARDS = [
 {
         "position": 1,
         "image": "Resources/Images/Logo.png",
-        "title": "Placeholder test 1",
-        "description": "This is a placeholder",
-        "link": "#",
-        "alt": "Placeholder"
+        "title": "Upcoming Events",
+        "description": "Check out the latest events happening in our community.",
+        "link": "upcoming-events.html",
+        "alt": "Upcoming Events"
     }
 ];
