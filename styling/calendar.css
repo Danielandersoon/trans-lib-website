@@ -89,8 +89,9 @@
 }
 
 .calendar-day.today {
-    background-color: var(--trans-blue);
-    color: var(--brutal-black);
+    border-color: var(--trans-blue);
+    border-width: calc(var(--brutal-border-width) * 2);
+    outline: 2px solid var(--brutal-black);
 }
 
 .calendar-day.empty { border-color: transparent; cursor: default; background: transparent; }

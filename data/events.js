@@ -10,5 +10,11 @@ const CALENDAR_EVENTS = [
         title: "Workshop: Know Your Rights",
         description: "Educational session regarding legal protections.",
         link: "https://example.com/legal-workshop"
+    },
+    {
+        date: "2026-06-18",
+        title: "Book Club Meeting",
+        description: "Monthly book club discussion at the library.",
+        link: "https://example.com/book-club"
     }
 ];
