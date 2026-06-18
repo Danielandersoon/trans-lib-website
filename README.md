@@ -16,35 +16,25 @@ Welcome! This project is a responsive landing page for Trans Liberation NCL, bui
 ## Contributing
 
 If you're jumping in to help:
-- **Adding Content**: New cards can be added to the `<main>` container in `index.html` using the following html code snippet:
-```html
-<div class="col-md-6 col-lg-4">
-    <a href="<link to actual event goes here>" class="card-link" target="_blank" rel="noopener">
-        <div class="card h-100">
-            <div class="row g-0 h-100">
-                <div class="col-4 col-sm-4 col-md-12 col-lg-4">
-                    <div class="card-img-wrapper">
-                        <img
-                        src="<image directory (can be web link if static)>"
-                        alt="<description of the image>"
-                        loading="lazy"
-                        />
-                    </div>
-                </div>
-                <div class="col-8 col-sm-8 col-md-12 col-lg-8">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title"><title goes here></h5>
-                        <p class="card-text flex-grow-1">
-                            <description of the card goes here>
-                            <i class="bi bi-arrow-right ms-1"></i>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a>
-</div>
+- **Adding Content**: New cards can be added to the `<main>` container in `index.html` by adding to the `home-page-cards.js` json with the format:
+```json
+{
+  "position": <int>,
+  "title": <string>,
+  "description": <string>,
+  "link": <string>,
+  "alt": <string>
+}
 ```
+New events can be added to the calander by adding to the `events.js` json with the format:
+```json
+{
+  "date": <string>, // YYY-MM-DD format
+  "title": <string>,
+  "description": <string>,
+  "link": <string>
+}
+
 
 - **Styling**: Any global style changes should be made via the CSS variables in `main.css` to ensure they apply correctly to both light and dark themes.
 
