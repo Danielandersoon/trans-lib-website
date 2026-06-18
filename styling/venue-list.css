@@ -1,14 +1,14 @@
 /* Reusing variables from :root in calendar.css for consistency */
 /* --brutal-black, --brutal-white, --brutal-border-width, --brutal-shadow */
 
-.toilet-list-container {
+.venue-list-container {
     max-width: 1000px;
     margin: 0 auto;
     padding-bottom: 5rem;
 }
 
-/* --- Toilet Card Styling --- */
-.toilet-card {
+/* --- Venue Card Styling --- */
+.venue-card {
     border: var(--brutal-border-width) solid var(--brutal-black);
     background-color: var(--brutal-white);
     box-shadow: var(--brutal-shadow);
@@ -19,35 +19,35 @@
     transition: 0.1s;
 }
 
-.toilet-card:hover {
+.venue-card:hover {
     transform: translate(-2px, -2px);
     box-shadow: 6px 6px 0px 0px var(--brutal-black);
 }
 
-.toilet-card h4 {
+.venue-card h4 {
     font-weight: 900;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
     color: var(--brutal-black);
 }
 
-.toilet-card p {
+.venue-card p {
     margin-bottom: 0.5rem;
     color: var(--brutal-black);
 }
 
-.toilet-card .address {
+.venue-card .address {
     font-style: italic;
     font-size: 0.9em;
     color: #555; /* Slightly muted for address */
 }
 
-.toilet-card .description {
+.venue-card .description {
     flex-grow: 1; /* Allows description to take up available space */
     margin-bottom: 1rem;
 }
 
-.toilet-card .status-indicator {
+.venue-card .status-indicator {
     font-weight: 900;
     padding: 0.25rem 0.75rem;
     border: 2px solid var(--brutal-black);
@@ -56,12 +56,12 @@
     margin-top: 0.5rem;
 }
 
-.toilet-card.greenlist .status-indicator {
+.venue-card.greenlist .status-indicator {
     background-color: #8BC34A; /* Green for friendly */
     color: var(--brutal-black);
 }
 
-.toilet-card.blacklist .status-indicator {
+.venue-card.blacklist .status-indicator {
     background-color: #F44336; /* Red for unfriendly */
     color: var(--brutal-black);
 }

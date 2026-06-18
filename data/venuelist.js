@@ -1,4 +1,4 @@
-const TOILETS = [
+const VENUES = [
     {
         "name": "Chill Cafe",
         "address": "10 Pilgrim St, Newcastle upon Tyne NE1 6QG",

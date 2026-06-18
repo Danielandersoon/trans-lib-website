@@ -2,10 +2,10 @@ const HOME_PAGE_CARDS = [
     {
         "position": 2,
         "image": "Resources/Images/Logo.png",
-        "title": "Safe Toilets",
-        "description": "Find trans-friendly toilets in your area.",
-        "link": "toilet-list.html",
-        "alt": "Safe Toilets"
+        "title": "Safe Venues",
+        "description": "Find trans-friendly venues in your area.",
+        "link": "venue-list.html",
+        "alt": "Safe Venues"
     },
 {
         "position": 1,
