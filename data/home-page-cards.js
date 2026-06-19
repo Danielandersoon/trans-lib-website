@@ -7,7 +7,7 @@ const HOME_PAGE_CARDS = [
         "link": "venue-list.html",
         "alt": "Safe Venues"
     },
-{
+    {
         "position": 1,
         "image": "Resources/Images/Logo.png",
         "title": "Upcoming Events",
@@ -22,5 +22,13 @@ const HOME_PAGE_CARDS = [
         "description": "Follow us on Instagram for updates and community stories.",
         "link": "https://www.instagram.com/transliberationnewcastle/",
         "alt": "Trans Liberation NCL Instagram"
-    }   
+    },
+    {
+        "position": 4,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/ProtonMail_icon.svg/960px-ProtonMail_icon.svg.png",
+        "title": "Contact Us",
+        "description": "Get in touch with us for any inquiries or support.",
+        "link": "contact-us.html",
+        "alt": "Contact Us"
+    }
 ];

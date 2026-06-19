@@ -1,20 +1,8 @@
 const CALENDAR_EVENTS = [
     {
-        date: "2026-06-02",
-        title: "Community Meetup",
-        description: "A local gathering for trans folks at the library.",
-        link: "https://example.com/meetup"
-    },
-    {
-        date: "2026-06-09",
-        title: "Workshop: Know Your Rights",
-        description: "Educational session regarding legal protections.",
-        link: "https://example.com/legal-workshop"
-    },
-    {
-        date: "2026-06-18",
-        title: "Book Club Meeting",
-        description: "Monthly book club discussion at the library.",
-        link: "https://example.com/book-club"
+        date: "2026-06-21",
+        title: "Demo - Against EHRC Guidance",
+        description: "A demonstration against the targeted attack against trans people in the recent EHRC guidance. <br> <br> <strong>Time:</strong> 12:00 PM <br> <strong>Location:</strong> Newcastle Civic Centre.",
+        link: "https://www.instagram.com/p/DZqTDOWNHy2/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
     }
 ];
