@@ -32,6 +32,7 @@ body {
     border-bottom: 8px solid var(--body-color);
     margin-bottom: 2.5rem;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    
 }
 .banner h1 {
     font-weight: 900;

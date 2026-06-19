@@ -17,13 +17,20 @@
     max-width: 1000px;
     margin: 0 auto;
     padding-bottom: 5rem;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 100%;
 }
 
 .calendar-header {
     border: var(--brutal-border-width) solid var(--brutal-black);
     background-color: var(--brutal-white);
     box-shadow: var(--brutal-shadow);
-    padding: 1.5rem;
+    padding: 1.5rem 2%;
+}
+
+.calendar-header h2 {
+    font-size: clamp(1rem, 4vw, 2.5rem);
 }
 
 .btn-brutal {
@@ -34,6 +41,8 @@
     font-weight: 900;
     color: var(--brutal-black) !important;
     transition: 0.1s;
+    padding: 0.5rem 1.5rem;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
 }
 
 .btn-brutal:hover {
@@ -49,8 +58,9 @@
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 15px;
-    margin-top: 3rem;
+    gap: 1.5%; /* Percentage-based gap */
+    margin-top: 2rem;
+    width: 100%;
 }
 
 .day-name {
@@ -60,20 +70,32 @@
     border: var(--brutal-border-width) solid var(--brutal-black);
     background-color: var(--brutal-black);
     color: var(--brutal-white);
-    padding: 10px;
+    padding: 2% 0;
+    font-size: clamp(0.5rem, 1.2vw, 1rem);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .calendar-day {
     aspect-ratio: 1 / 1;
     border: var(--brutal-border-width) solid var(--brutal-black);
     background-color: var(--brutal-white);
-    padding: 10px;
+    padding: 3% 2%;
     font-weight: 900;
     cursor: pointer;
     transition: 0.1s;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-size: clamp(0.6rem, 1.5vw, 1rem);
+    min-height: 0;
+    min-width: 0;
+}
+
+.calendar-day .day-number {
+    font-size: clamp(0.6rem, 1.5vw, 1.2rem);
 }
 
 .calendar-day:hover:not(.empty) {
@@ -94,11 +116,200 @@
     outline: 2px solid var(--brutal-black);
 }
 
-.calendar-day.empty { border-color: transparent; cursor: default; background: transparent; }
-.event-dot { width: 14px; height: 14px; background-color: var(--brutal-black); border-radius: 50%; align-self: flex-end; }
+.calendar-day.empty { 
+    border-color: transparent; 
+    cursor: default; 
+    background: transparent; 
+}
+
+.event-dot { 
+    width: clamp(4px, 1.5vw, 14px);
+    height: clamp(4px, 1.5vw, 14px);
+    background-color: var(--brutal-black); 
+    border-radius: 50%; 
+    align-self: flex-end;
+    flex-shrink: 0;
+}
 
 .event-info-panel {
     border: var(--brutal-border-width) solid var(--brutal-black);
     background-color: var(--brutal-white);
     box-shadow: var(--brutal-shadow);
+    padding: 2rem 3%;
+    margin-top: 3rem;
+}
+
+.event-info-panel h3 {
+    font-size: clamp(1.2rem, 3vw, 2.5rem);
+}
+
+.event-info-panel h4 {
+    font-size: clamp(1rem, 2vw, 1.8rem);
+}
+
+.event-info-panel p {
+    font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+}
+
+/* === RESPONSIVE BREAKPOINTS WITH PERCENTAGES === */
+
+/* Tablets and small laptops */
+@media (max-width: 992px) {
+    .calendar-container {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    
+    .calendar-grid {
+        gap: 1.2%;
+    }
+    
+    .calendar-header {
+        padding: 1.2rem 2%;
+    }
+}
+
+/* Large phones and small tablets */
+@media (max-width: 768px) {
+    .calendar-container {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    
+    .calendar-grid {
+        gap: 1%;
+    }
+    
+    .calendar-header {
+        padding: 1rem 2%;
+    }
+    
+    .calendar-header h2 {
+        font-size: clamp(0.9rem, 3.5vw, 1.5rem);
+    }
+    
+    .btn-brutal {
+        padding: 0.3rem 1rem;
+        font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+        border-width: 3px !important;
+    }
+    
+    .event-dot {
+        width: clamp(3px, 1.2vw, 8px);
+        height: clamp(3px, 1.2vw, 8px);
+    }
+    
+    .event-info-panel {
+        padding: 1.5rem 4%;
+        margin-top: 2rem;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 576px) {
+    .calendar-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .calendar-grid {
+        gap: 0.8%;
+    }
+    
+    .day-name {
+        border-width: 2px;
+        padding: 1% 0;
+        font-size: clamp(0.4rem, 1vw, 0.7rem);
+    }
+    
+    .calendar-day {
+        border-width: 2px;
+        padding: 2% 1%;
+        font-size: clamp(0.4rem, 1.2vw, 0.8rem);
+    }
+    
+    .calendar-day .day-number {
+        font-size: clamp(0.4rem, 1.2vw, 0.8rem);
+    }
+    
+    .calendar-header {
+        padding: 0.8rem 2%;
+        border-width: 3px;
+    }
+    
+    .calendar-header h2 {
+        font-size: clamp(0.7rem, 3vw, 1.2rem);
+    }
+    
+    .btn-brutal {
+        padding: 0.2rem 0.7rem;
+        font-size: clamp(0.6rem, 1.2vw, 0.8rem);
+        border-width: 2px !important;
+        box-shadow: 2px 2px 0px 0px var(--brutal-black);
+    }
+    
+    .btn-brutal:hover {
+        transform: translate(-1px, -1px);
+        box-shadow: 3px 3px 0px 0px var(--brutal-black);
+    }
+    
+    .btn-brutal:active {
+        transform: translate(1px, 1px);
+        box-shadow: 0px 0px 0px 0px var(--brutal-black);
+    }
+    
+    .event-dot {
+        width: clamp(2px, 1vw, 6px);
+        height: clamp(2px, 1vw, 6px);
+    }
+    
+    .event-info-panel {
+        padding: 1rem 5%;
+        margin-top: 1.5rem;
+        border-width: 3px;
+    }
+    
+    .event-info-panel h3 {
+        font-size: clamp(0.9rem, 2.5vw, 1.3rem);
+    }
+    
+    .event-info-panel h4 {
+        font-size: clamp(0.8rem, 1.8vw, 1.2rem);
+    }
+    
+    .event-info-panel p {
+        font-size: clamp(0.7rem, 1vw, 0.9rem);
+    }
+}
+
+/* Very small phones */
+@media (max-width: 399px) {
+    .calendar-container {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+    
+    .calendar-grid {
+        gap: 0.5%;
+    }
+    
+    .day-name {
+        font-size: clamp(0.3rem, 0.8vw, 0.5rem);
+        border-width: 1.5px;
+    }
+    
+    .calendar-day {
+        padding: 1% 0.5%;
+        border-width: 1.5px;
+        font-size: clamp(0.3rem, 1vw, 0.6rem);
+    }
+    
+    .calendar-day .day-number {
+        font-size: clamp(0.3rem, 1vw, 0.6rem);
+    }
+    
+    .event-dot {
+        width: clamp(1.5px, 0.8vw, 4px);
+        height: clamp(1.5px, 0.8vw, 4px);
+    }
 }

@@ -31,7 +31,7 @@
 
                 return `
                     <div class="col-md-6 col-lg-4">
-                        <a href="${card.link}" class="card-link" target="_blank" rel="noopener">
+                        <a href="${card.link}" class="card-link" rel="noopener">
                             <div class="card h-100">
                                 <div class="row g-0 h-100">
                                     ${imageSection}

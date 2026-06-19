@@ -17,6 +17,14 @@ const HOME_PAGE_CARDS = [
     },
     {
         "position": 3,
+        "image": "Resources/Images/Logo.png",
+        "title": "Additional Resources",
+        "description": "Explore more resources and support for the community.",
+        "link": "additional-resources.html",
+        "alt": "Additional Resources"
+    },
+    {
+        "position": 4,
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/CIS-A2K_Instagram_Icon_%28Black%29.svg/960px-CIS-A2K_Instagram_Icon_%28Black%29.svg.png",
         "title": "Trans Lib NCL Insta",
         "description": "Follow us on Instagram for updates and community stories.",
@@ -24,7 +32,7 @@ const HOME_PAGE_CARDS = [
         "alt": "Trans Liberation NCL Instagram"
     },
     {
-        "position": 4,
+        "position": 5,
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/ProtonMail_icon.svg/960px-ProtonMail_icon.svg.png",
         "title": "Contact Us",
         "description": "Get in touch with us for any inquiries or support.",
